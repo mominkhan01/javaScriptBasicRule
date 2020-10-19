@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Input Year: <input type="text" id = "isLeapYear"/> 
+      
+    <input type="button" id="button" onclick="isLeapYear()"
+            value="Check Leap Year"> 
+      
+    <p id="GFG">Hello</p> 
+      
+    <!-- JavaScript code to check given year is 
+        leap year or not -->
+        <script>
+            var result;
+           var year = parseInt(document.getElementById('isLeapYear').value);
+            function isLeapYear(year){
+                // console.log("Clicked");
+                if(year / 400){
+                    result = true;
+                }
+                else if(year / 4){
+                    result = true;
+                }
+                else if(year / 100){
+                    result = false;
+                }
+                else{
+                    result = false;
+                }
+                return false;
+                if (result==true){
+    document.getElementById('GFG').innerText= 'leapYear';
+}else{
+    document.getElementById('GFG').innerText= 'not leapYear';
+
+}
+}
+
+        </script>
+
+</body>
+</html>
